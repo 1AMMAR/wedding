@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الأفراح الراقية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4af37;
+            --primary-light: #e9d18b;
+            --primary-dark: #b08d1a;
+            --secondary-color: #8a6d3b;
+            --dark-color: #222;
+            --light-color: #fff;
+            --gray-color: #f8f8f8;
+            --text-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            direction: rtl;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--dark-color);
+            border: 2px solid var(--primary-color);
+            padding: 12px 30px;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: var(--primary-color);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 25px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+            font-size: 17px;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--light-color);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Reservation Section */
+        .reservation {
+            padding: 100px 0;
+            background-color: var(--gray-color);
+            background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+
+        .reservation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.92);
+        }
+
+        .reservation .container {
+            position: relative;
+        }
+
+        .reservation-form {
+            background-color: white;
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+
+        .form-group {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+
+        .form-group:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .form-group h3 {
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .form-group h3::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 25px;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .form-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-control {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .form-control.full-width {
+            flex: 0 0 100%;
+        }
+
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+            background-color: #fafafa;
+        }
+
+        .form-control input:focus,
+        .form-control select:focus,
+        .form-control textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+            background-color: white;
+        }
+
+        .form-control textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-control {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-control input {
+            width: auto;
+            margin-left: 10px;
+            transform: scale(1.2);
+        }
+
+        .checkbox-control label {
+            margin-bottom: 0;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 40px;
+            gap: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            height: 300px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            border-radius: var(--border-radius);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 25px;
+            transform: translateY(100%);
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover .gallery-overlay h3 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--gray-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+        }
+
+        .testimonials::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .testimonial {
+            padding: 20px;
+        }
+
+        .testimonial-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+
+        .testimonial-content::before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(212, 175, 55, 0.2);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-content p {
+            margin-bottom: 25px;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 15px;
+            border: 3px solid var(--primary-light);
+        }
+
+        .testimonial-author-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .testimonial-author-info span {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .testimonial-control {
+            background-color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .testimonial-control:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 40px;
+            background-color: var(--gray-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .contact-item i {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 8px;
+            color: var(--dark-color);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .contact-item p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0 20px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light), var(--primary-color));
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-logo h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .footer-logo p {
+            color: #aaa;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-links h3 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 22px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links ul li a {
+            color: #aaa;
+            transition: var(--transition);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links ul li a i {
+            margin-left: 10px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary-color);
+            padding-right: 5px;
+        }
+
+        .footer-links ul li a:hover i {
+            transform: translateX(-5px);
+        }
+
+        .footer-social {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-social h3 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 22px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-delay-1 {
+            transition-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            transition-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            transition-delay: 0.6s;
+        }
+
+        /* Success Message */
+        .success-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .success-message.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .success-content {
+            background-color: white;
+            padding: 50px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            transform: translateY(30px);
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .success-message.active .success-content {
+            transform: translateY(0);
+        }
+        
+        .success-content i {
+            font-size: 70px;
+            color: #4CAF50;
+            margin-bottom: 25px;
+        }
+        
+        .success-content h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .success-content p {
+            margin-bottom: 25px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(212, 175, 55, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.3rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .form-control {
+                flex: 0 0 100%;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                display: none;
+                max-height: 80vh;
+                overflow-y: auto;
+                z-index: 1000;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                display: block;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .reservation-form {
+                padding: 30px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+            
+            .reservation-form {
+                padding: 20px;
+            }
+            
+            .form-group h3 {
+                font-size: 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>خدمات الأفراح الراقية</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#services"><i class="fas fa-concierge-bell"></i> خدماتنا</a></li>
+                    <li><a href="#reservation"><i class="fas fa-calendar-check"></i> حجز</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> معرض الصور</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fade-in">حفل زفاف لا يُنسى</h1>
+                <p class="animate-fade-in animate-delay-1">نقدم لكم خدمات متكاملة لتنظيم حفلات الزفاف بأعلى مستويات الرقي والفخامة</p>
+                <a href="#reservation" class="btn animate-fade-in animate-delay-2">احجز الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-building"></i>
+                    <h3>قاعات الأفراح</h3>
+                    <p>اختر من بين أفخم القاعات المجهزة بأحدث التقنيات</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-car-side"></i>
+                    <h3>سيارات فاخرة</h3>
+                    <p>سيارات فاخرة مع أو بدون سائق وخدمة تزيين</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-utensils"></i>
+                    <h3>خدمات الطعام</h3>
+                    <p>قوائم طعام متنوعة من أشهر الطهاة</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>الحلويات</h3>
+                    <p>تشكيلة واسعة من الحلويات الفاخرة</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-spa"></i>
+                    <h3>تنسيق الزهور</h3>
+                    <p>باقات وتنسيقات زهور مميزة</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-music"></i>
+                    <h3>خدمات الموسيقى</h3>
+                    <p>عازفين محترفين ودي جي لإضفاء أجواء مميزة</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-hotel"></i>
+                    <h3>حجز فندق</h3>
+                    <p>حجوزات في أفخم الفنادق بأسعار خاصة</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-cut"></i>
+                    <h3>خدمات التجميل</h3>
+                    <p>كوافير متخصص للعروسين</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <i class="fas fa-camera"></i>
+                    <h3>التصوير</h3>
+                    <p>تصوير احترافي وخدمات درون VIP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <h2 class="section-title">احجز خدماتك الآن</h2>
+            <form id="reservationForm" class="reservation-form">
+                <div class="form-group">
+                    <h3>معلومات الحجز الأساسية</h3>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="date">تاريخ الحفل</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="guests">عدد الضيوف</label>
+                            <input type="number" id="guests" name="guests" min="1" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="budget">الميزانية التقريبية</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">اختر الميزانية</option>
+                                <option value="budget1">أقل من 50,000 ل.س</option>
+                                <option value="budget2">50,000 - 100,000 ل.س</option>
+                                <option value="budget3">100,000 - 200,000 ل.س</option>
+                                <option value="budget4">أكثر من 200,000 ل.س</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>خدمات القاعة</h3>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="venue">اسم الصالة</label>
+                            <select id="venue" name="venue">
+                                <option value="">اختر الصالة</option>
+                                <option value="hall1">قاعة الملكية</option>
+                                <option value="hall2">قاعة الأميرات</option>
+                                <option value="hall3">قاعة القصر</option>
+                                <option value="hall4">قاعة الفخامة</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label for="chairs">عدد الكراسي</label>
+                            <input type="number" id="chairs" name="chairs" min="1">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="vipService" name="vipService">
+                            <label for="vipService">خدمة VIP</label>
+                        </div>
+                        <div class="form-control">
+                            <label for="tableDecor">ديكور الطاولات</label>
+                            <select id="tableDecor" name="tableDecor">
+                                <option value="">اختر نوع الديكور</option>
+                                <option value="decor1">كلاسيك</option>
+                                <option value="decor2">مودرن</option>
+                                <option value="decor3">رومانسي</option>
+                                <option value="decor4">مخصص</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>خدمات السيارة</h3>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="car">نوع السيارة</label>
+                            <select id="car" name="car">
+                                <option value="">اختر السيارة</option>
+                                <option value="car1">مرسيدس S-Class</option>
+                                <option value="car2">رولز رويس</option>
+                                <option value="car3">بنتلي</option>
+                                <option value="car4">ليموزين</option>
+                            </select>
+                        </div>
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="driver" name="driver">
+                            <label for="driver">مع سائق</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="carDecor">تزيين السيارة</label>
+                            <select id="carDecor" name="carDecor">
+                                <option value="">اختر نوع التزيين</option>
+                                <option value="decor1">زهور طبيعية</option>
+                                <option value="decor2">زهور صناعية</option>
+                                <option value="decor3">تزيين فاخر</option>
+                                <option value="decor4">بدون تزيين</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>خدمات الطعام والمشروبات</h3>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="food">قائمة الطعام</label>
+                            <select id="food" name="food">
+                                <option value="">اختر قائمة الطعام</option>
+                                <option value="menu1">قائمة عربية تقليدية</option>
+                                <option value="menu2">قائمة عالمية</option>
+                                <option value="menu3">قائمة مشتركة</option>
+                                <option value="menu4">قائمة مخصصة</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label for="dessert">الحلويات</label>
+                            <select id="dessert" name="dessert">
+                                <option value="">اختر الحلويات</option>
+                                <option value="dessert1">حلويات شرقية</option>
+                                <option value="dessert2">حلويات غربية</option>
+                                <option value="dessert3">تشكيلة متنوعة</option>
+                                <option value="dessert4">كيك الزفاف فقط</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="drinks">المشروبات</label>
+                            <select id="drinks" name="drinks">
+                                <option value="">اختر المشروبات</option>
+                                <option value="drinks1">عصائر طبيعية</option>
+                                <option value="drinks2">مشروبات غازية</option>
+                                <option value="drinks3">مشروبات ساخنة</option>
+                                <option value="drinks4">تشكيلة كاملة</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>خدمات إضافية</h3>
+                    <div class="form-row">
+                        <div class="form-control">
+                            <label for="flowers">الزهور</label>
+                            <select id="flowers" name="flowers">
+                                <option value="">اختر نوع الزهور</option>
+                                <option value="flowers1">ورود حمراء</option>
+                                <option value="flowers2">ورود بيضاء</option>
+                                <option value="flowers3">تشكيلة متنوعة</option>
+                                <option value="flowers4">زهور مخصصة</option>
+                            </select>
+                        </div>
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="traditional" name="traditional">
+                            <label for="traditional">عراضة تقليدية</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="musicians" name="musicians">
+                            <label for="musicians">عازفين</label>
+                        </div>
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="dj" name="dj">
+                            <label for="dj">دي جي</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="hotel" name="hotel">
+                            <label for="hotel">حجز فندق</label>
+                        </div>
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="hairdresser" name="hairdresser">
+                            <label for="hairdresser">كوافير</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="weddingDress" name="weddingDress">
+                            <label for="weddingDress">فستان عروس</label>
+                        </div>
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="groomSuit" name="groomSuit">
+                            <label for="groomSuit">بدلة عريس</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="photographer" name="photographer">
+                            <label for="photographer">مصور فوتوغرافي</label>
+                        </div>
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="drones" name="drones">
+                            <label for="drones">تصوير درون VIP</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-control checkbox-control">
+                            <input type="checkbox" id="invitations" name="invitations">
+                            <label for="invitations">بطاقات دعوة</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>ملاحظات إضافية</h3>
+                    <div class="form-row">
+                        <div class="form-control full-width">
+                            <label for="notes">ملاحظات</label>
+                            <textarea id="notes" name="notes" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+                    <button type="reset" class="btn btn-secondary">إعادة تعيين</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1296&q=80" alt="قاعة الأفراح">
+                    <div class="gallery-overlay">
+                        <h3>قاعة الملكية</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1543131276-40a2486f932c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="سيارة زفاف">
+                    <div class="gallery-overlay">
+                        <h3>سيارات فاخرة</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1529566652340-2c41a1eb6d93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="بوفيه مميز">
+                    <div class="gallery-overlay">
+                        <h3>خدمات الطعام</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="كيك زفاف">
+                    <div class="gallery-overlay">
+                        <h3>كيك وحلويات</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="تنسيق زهور">
+                    <div class="gallery-overlay">
+                        <h3>تنسيق زهور</h3>
+                    </div>
+                </div>
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="عروسين">
+                    <div class="gallery-overlay">
+                        <h3>لحظات سعيدة</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">آراء العملاء</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"كانت خدماتكم رائعة وفاقت توقعاتنا. شكراً لجعل يوم زفافنا لا يُنسى!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="أحمد ومنى">
+                            <div class="testimonial-author-info">
+                                <h4>أحمد ومنى</h4>
+                                <span>يناير 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"الاهتمام بالتفاصيل كان مذهلاً، وكان فريق العمل محترفاً للغاية. أنصح بشدة بخدماتكم."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="محمد وسارة">
+                            <div class="testimonial-author-info">
+                                <h4>محمد وسارة</h4>
+                                <span>مارس 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"لقد وفرتم علينا الكثير من الجهد والوقت، وكانت النتيجة مبهرة. شكراً جزيلاً!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="خالد ونورة">
+                            <div class="testimonial-author-info">
+                                <h4>خالد ونورة</h4>
+                                <span>يونيو 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button id="prevTestimonial" class="testimonial-control"><i class="fas fa-chevron-right"></i></button>
+                <button id="nextTestimonial" class="testimonial-control"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>العنوان</h3>
+                            <p>دمشق ,سوريا</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>الهاتف</h3>
+                            <p>+963 12 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@weddingservices.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>ساعات العمل</h3>
+                            <p>السبت - الخميس: 9:00 ص - 9:00 م</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-control">
+                                <label for="contactName">الاسم</label>
+                                <input type="text" id="contactName" name="contactName" required>
+                            </div>
+                            <div class="form-control">
+                                <label for="contactEmail">البريد الإلكتروني</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-control">
+                                <label for="contactPhone">رقم الهاتف</label>
+                                <input type="tel" id="contactPhone" name="contactPhone">
+                            </div>
+                            <div class="form-control">
+                                <label for="contactSubject">الموضوع</label>
+                                <input type="text" id="contactSubject" name="contactSubject" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-control full-width">
+                                <label for="contactMessage">الرسالة</label>
+                                <textarea id="contactMessage" name="contactMessage" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">إرسال</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>خدمات الأفراح الراقية</h2>
+                    <p>نجعل يوم زفافك لا يُنسى</p>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-angle-left"></i> الرئيسية</a></li>
+                        <li><a href="#services"><i class="fas fa-angle-left"></i> خدماتنا</a></li>
+                        <li><a href="#reservation"><i class="fas fa-angle-left"></i> حجز</a></li>
+                        <li><a href="#gallery"><i class="fas fa-angle-left"></i> معرض الصور</a></li>
+                        <li><a href="#contact"><i class="fas fa-angle-left"></i> اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-snapchat-ghost"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 خدمات الأفراح الراقية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Activate animations when elements come into view
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            
+            const checkAnimations = () => {
+                animateElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 50) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            
+            // Check animations on page load
+            checkAnimations();
+            
+            // Check animations on scroll
+            window.addEventListener('scroll', checkAnimations);
+            
+            // Header scroll effect
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile Navigation Toggle
+            const createMobileNav = () => {
+                const header = document.querySelector('header');
+                const nav = document.querySelector('nav');
+                
+                // Create mobile menu button if it doesn't exist
+                if (!document.querySelector('.mobile-menu-btn')) {
+                    const mobileMenuBtn = document.createElement('div');
+                    mobileMenuBtn.className = 'mobile-menu-btn';
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    header.insertBefore(mobileMenuBtn, nav);
+                    
+                    // Toggle mobile menu
+                    mobileMenuBtn.addEventListener('click', function() {
+                        nav.classList.toggle('active');
+                        this.classList.toggle('active');
+                        
+                        if (this.classList.contains('active')) {
+                            this.innerHTML = '<i class="fas fa-times"></i>';
+                        } else {
+                            this.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    });
+                }
+            };
+            
+            // Check if we need mobile navigation
+            const checkMobileNav = () => {
+                if (window.innerWidth <= 768) {
+                    createMobileNav();
+                }
+            };
+            
+            checkMobileNav();
+            window.addEventListener('resize', checkMobileNav);
+            
+            // Smooth Scrolling for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                        const nav = document.querySelector('nav');
+                        
+                        if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
+                            mobileMenuBtn.click();
+                        }
+                    }
+                });
+            });
+            
+            // Testimonials Slider
+            const testimonials = document.querySelectorAll('.testimonial');
+            let currentTestimonial = 0;
+            
+            // Hide all testimonials except the first one
+            testimonials.forEach((testimonial, index) => {
+                if (index !== 0) {
+                    testimonial.style.display = 'none';
+                }
+            });
+            
+            // Next testimonial
+            document.getElementById('nextTestimonial').addEventListener('click', function() {
+                testimonials[currentTestimonial].style.display = 'none';
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                testimonials[currentTestimonial].style.display = 'block';
+            });
+            
+            // Previous testimonial
+            document.getElementById('prevTestimonial').addEventListener('click', function() {
+                testimonials[currentTestimonial].style.display = 'none';
+                currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+                testimonials[currentTestimonial].style.display = 'block';
+            });
+            
+            // Auto-rotate testimonials
+            setInterval(() => {
+                document.getElementById('nextTestimonial').click();
+            }, 5000);
+            
+            // Form Submission
+            const reservationForm = document.getElementById('reservationForm');
+            if (reservationForm) {
+                reservationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Create success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'success-message';
+                    successMessage.innerHTML = `
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>تم استلام طلبك بنجاح!</h3>
+                            <p>سنقوم بالتواصل معك قريباً لتأكيد الحجز وتفاصيل الدفع.</p>
+                            <button class="btn btn-primary close-message">حسناً</button>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(successMessage);
+                    
+                    // Show success message with animation
+                    setTimeout(() => {
+                        successMessage.classList.add('active');
+                    }, 10);
+                    
+                    // Close success message
+                    successMessage.querySelector('.close-message').addEventListener('click', function() {
+                        successMessage.classList.remove('active');
+                        setTimeout(() => {
+                            document.body.removeChild(successMessage);
+                        }, 300);
+                    });
+                    
+                    // Reset form
+                    reservationForm.reset();
+                });
+            }
+            
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Create success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'success-message';
+                    successMessage.innerHTML = `
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>تم إرسال رسالتك بنجاح!</h3>
+                            <p>سنقوم بالرد عليك في أقرب وقت ممكن.</p>
+                            <button class="btn btn-primary close-message">حسناً</button>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(successMessage);
+                    
+                    // Show success message with animation
+                    setTimeout(() => {
+                        successMessage.classList.add('active');
+                    }, 10);
+                    
+                    // Close success message
+                    successMessage.querySelector('.close-message').addEventListener('click', function() {
+                        successMessage.classList.remove('active');
+                        setTimeout(() => {
+                            document.body.removeChild(successMessage);
+                        }, 300);
+                    });
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
